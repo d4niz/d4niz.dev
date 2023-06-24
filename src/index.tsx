@@ -1,14 +1,14 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BackgroundRandom } from './modules/BackgrondModel/Background';
 import { ContactButton } from './modules/ContactButton';
 import './index.css';
 
+import ReactDOM from 'react-dom';
 
-createRoot(document.getElementById('root') as HTMLElement).render(
-    <StrictMode>
+ReactDOM.render(
+  <StrictMode>
     <div className='container'>
       <BackgroundRandom/>
       <header className="container-header">
@@ -37,4 +37,5 @@ createRoot(document.getElementById('root') as HTMLElement).render(
       </div>
     </div>
   </StrictMode>,
-)
+  document.getElementById('root')
+);
